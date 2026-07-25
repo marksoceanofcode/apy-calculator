@@ -5,6 +5,10 @@
   --foreground: #171717;
 }
 
+@theme {
+  --max-w-200: 800px;
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
