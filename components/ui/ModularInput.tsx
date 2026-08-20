@@ -2,6 +2,7 @@ type TypeOfInput = "text" | "range";
 
 interface ModularInputProps {
   type: TypeOfInput;
+  containerClasses?: string;
   description?: string;
   descriptionClasses?: string;
   id?: string;
@@ -16,6 +17,17 @@ interface ModularInputProps {
   size?: string;
 }
 
-export const ModularInput = ({ description, label, name }: ModularInputProps) => {
-  return <></>;
+export const ModularInput = ({
+  type,
+  containerClasses,
+  description,
+  inputClasses,
+  label,
+  name,
+}: ModularInputProps) => {
+  return (
+    <div className={containerClasses}>
+      <input className={inputClasses} type={type}></input>
+    </div>
+  );
 };
