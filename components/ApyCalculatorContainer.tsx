@@ -1,3 +1,4 @@
+import { CurrencyInput } from "./ui/CurrencyInput";
 import { RangeInput } from "./ui/RangeInput";
 
 export const ApyCalculatorContainer = () => {
@@ -8,6 +9,7 @@ export const ApyCalculatorContainer = () => {
       </div>
       <div className="flex flex-col w-full lg:flex-row">
         <div className="flex-1 p-3">
+          <CurrencyInput id="currencyInput" name="initialdeposit" label="Initial Deposit" />
           <RangeInput
             id="apyInputId"
             min="1"
