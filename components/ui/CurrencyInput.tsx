@@ -20,8 +20,28 @@ export const CurrencyInput = ({
 
   return (
     <div className={containerClass}>
-      <label htmlFor={name}>{label}</label>
-      <input className="block" name={name} pattern="^[0-9]+(?:\.[0-9]+)?$" type="text" />
+      <label className="block mb-2 font-semibold" htmlFor={name}>
+        {label}
+      </label>
+      <div className="inline-block relative">
+        <span className="absolute left-[10px] pt-2 pointer-events-none text-accent-gray">
+          $
+        </span>
+        <input
+          id={id}
+          className="border border-accent-gray placeholder-text-accent-gray pl-6 pr-4 py-2 rounded-md"
+          inputMode="decimal"
+          name={name}
+          pattern="^[0-9]+(?:\.[0-9]+)?$"
+          placeholder="0"
+          type="text"
+        />
+      </div>
+      {description ? (
+        <span className="block mt-0.5 text-xs text-accent-gray">{description}</span>
+      ) : (
+        <></>
+      )}
     </div>
   );
 };
