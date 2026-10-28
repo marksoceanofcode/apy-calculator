@@ -1,4 +1,5 @@
 import { CurrencyInput } from "./ui/CurrencyInput";
+import { RadioInput } from "./ui/RadioInput";
 import { RangeInput } from "./ui/RangeInput";
 
 export const ApyCalculatorContainer = () => {
@@ -26,12 +27,34 @@ export const ApyCalculatorContainer = () => {
             />
             <RangeInput
               id="apyInputId"
+              label="APY"
               min="1"
               max="10"
+              minLabel="1%"
+              maxLabel="10%"
               name="apyInput"
               step="0.1"
-              defaultValue="3"
+              defaultValue="3.0"
+              unit="%"
               inputClasses="irange-slider"
+            />
+            <RangeInput
+              id="savingsTimePeriodInputId"
+              label="Savings Time Period"
+              min="1"
+              max="10"
+              minLabel="1 year"
+              maxLabel="10 years"
+              name="savingsTimePeriodInput"
+              step="1"
+              defaultValue="3"
+              unit="years"
+              inputClasses="irange-slider"
+            />
+            <RadioInput
+              id="compoundFrequencyId"
+              label="Compound Frequency"
+              name="compoundFrequency"
             />
           </form>
         </div>
