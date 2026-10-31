@@ -1,8 +1,16 @@
+"use client"
+
+import { SummarySection } from "./SummarySection";
 import { CurrencyInput } from "./ui/CurrencyInput";
 import { RadioInput } from "./ui/RadioInput";
 import { RangeInput } from "./ui/RangeInput";
 
 export const ApyCalculatorContainer = () => {
+
+  function handleFormChange(){
+
+  }
+
   return (
     <div className="w-full">
       <div className="mb-8">
@@ -12,7 +20,7 @@ export const ApyCalculatorContainer = () => {
       </div>
       <div className="flex flex-col w-full lg:flex-row">
         <div className="flex-1 p-3">
-          <form>
+          <form onChange={handleFormChange}>
             <CurrencyInput
               id="currencyInput"
               description="The amount you start with (principal)"
@@ -58,7 +66,9 @@ export const ApyCalculatorContainer = () => {
             />
           </form>
         </div>
-        <div className="flex-1 p-3 items-center justify-center">Col 2</div>
+        <div className="flex-1 p-3 items-center justify-center">
+          <SummarySection id="summarySectionId" futureBalance={0.00} />
+        </div>
       </div>
     </div>
   );

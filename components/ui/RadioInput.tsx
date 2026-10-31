@@ -49,7 +49,7 @@ export const RadioInput = ({
           />
           <label
             htmlFor={`${id}-monthly`}
-            className="inline-block cursor-pointer rounded-lg bg-[#cccccc] px-6 py-2.5 font-semibold text-foreground transition-colors peer-checked:bg-dark-green peer-checked:text-bright-green"
+            className="inline-block cursor-pointer rounded-lg bg-fill-gray px-6 py-2.5 font-semibold text-foreground transition-colors peer-checked:bg-dark-green peer-checked:text-bright-green"
           >
             Monthly
           </label>
